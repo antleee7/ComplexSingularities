@@ -1,0 +1,309 @@
+\documentclass{beamer}
+
+\usetheme{CambridgeUS}  % Select your favorite theme
+
+
+\title{Complex Manifolds}
+\author{Chapter 1}
+\institute{Complex Singularities}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Introduction}
+
+In this course, we will explain how to extract \textbf{topological information} about a \textbf{complex manifold} by studying the holomorphic maps \[f:X \to T, \text{dim}T = 1\] and their critical points.
+
+\end{frame}
+
+
+
+\section{Complex $n$-manifold}
+
+
+\begin{frame}
+\frametitle{Complex $n$-manifold}
+
+A complex $n$-manifold is...
+
+\phantom{?}
+
+...a locally compact Hausdorff\footnote{Other definitions also assume 2nd countability.} space $X$ together with
+
+\begin{itemize}
+    \item Open cover $U_\alpha$ of $X$
+    \item Homeomorphisms $h_\alpha: U_\alpha \to \mathcal{O}_\alpha$ where $\mathcal{O}_\alpha \subset \mathbb{C}^n$ is open
+    \item Change of coordinate maps are \textit{biholomorphic}
+\end{itemize}
+
+\phantom{?}
+
+\textbf{biholomorphism:} $\phi:U\subset \mathbb{C}^n \to V\subset\mathbb{C}^n$ such that $U,V$ are open and $\phi, \phi^{-1}$ are holomorphic.
+
+\phantom{?}
+
+Note that the charts map from $X$ to $\mathbb{C}^n$, not the other way.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Holomorphic functions on $X$}
+
+A function $f:X\to \mathbb{C}$ is said to be \textbf{holomorphic} if $f|_{U_\alpha} \circ h_\alpha^{-1} : \mathcal{O}_\alpha \to \mathbb{C}$ is holomorphic.
+
+\phantom{?}
+
+Maps $f : X \to \mathbb{C}^m$ are \textbf{holomorphic} if each component function is holomorphic (in the sense defined above).
+
+\phantom{?}
+
+Similarly, if $Y$ is a complex $m$-manifold with a holomorphic atlas $(V_i, g_i)$ and if $F:X \to Y$ is continuous, then $F$ is said to be \textbf{holomorphic} if for every $i$, the map $g_i \circ F : F^{-1}(V_i)\to g_i(U_i) \subset \mathbb{C}^m$ is holomorphic (in the sense defined above). 
+
+\phantom{?}
+
+cf. Do Carmo, defining differentiable functions between surfaces
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Further definitions}
+
+For a complex $n$-manifold $X$, we mean by \textbf{local coordinates near} $x$ a biholomorphic map from a neighborhood of $x$ onto an open subset of $\mathbb{C}^n$.
+
+\phantom{?}
+
+Remark: $\mathbb{C}^n = (z_1,\cdots,z_n)$ with $z_k = x_k + iy_k$ is equipped with a canonical orientation given by \[dx_1\wedge dy_1 \wedge \cdots \wedge dx_n\wedge dy_n\] and every biholomorphic map preserves this orientation. Therefore, every complex manifold has a natural orientation.
+
+\phantom{?}
+
+It is clear when we think about $\mathbb{C}^1$, the complex plane has an obvious orientation (counterclockwise on the complex plane).
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Further definitions}
+
+Suppose $F:X \to \mathbb{C}^m$, $F = (F_1, \ldots, F_m)$ is a holomorphic map. A point $x \in X$ is \textbf<overlay specification>{regular} if there exists local coordinates $(z_1,\ldots,z_n)$ near $x$ such that the Jacobian matrix \[\left(\frac{\partial F_i}{\partial z_j}(x)\right)_{1\leq i\leq m, 1\leq j\leq n}\]has maximal rank.\footnote{?} This extends to holomorphic maps $F:X \to Y$.
+
+A point $x \in X$ which is not regular is called critical.\footnote{Respect to which $F$?} A point $y \in Y$ is said to be a regular value of $F$ if $F^{-1}(y)$ are regular points.
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Further definitions}
+
+A critical point $x \in X$ is \textbf{nondegenerate} if there exists local coordinates near $x$ and $F(x)$ respectively such that $F$ can be locally described as a function\footnote{Holomorphic?} $u(z)$ and the Hessian has nonzero determinant.
+
+A holomorphic map $F : X \to Y$ is a \textbf{Morse map} if \begin{itemize}
+    \item dim $Y$ = 1
+    \item All critical points of $F$ are nondegenerate
+    \item For all critical values $y \in Y$, $F^{-1}(y)$ contains a unique critical point.
+\end{itemize}
+
+\textbf{Example} $f = z_1^2 + \cdots + z_n^2$ is Morse. dim $\mathbb{C}$ is obviously 1. The only critical point is $0$, for which the Hessian is $(2\delta_{ij})$ which has determinant $2^n \neq 0$. The third condition is clear.
+
+
+
+\end{frame}
+
+
+
+\section{Basic examples}
+
+\begin{frame}
+\frametitle{Projective space}
+
+$N$-dimensional complex projective space $\mathbb{P}^N$: The quotient of $\mathbb{C}^{N+1}\setminus \{0\}$ modulo the equivalence relation \[u \sim v \Leftrightarrow \exists \lambda \in \mathbb{C}^*; v = \lambda u\]
+
+The natural projection $\pi : \mathbb{C}^{N+1}\setminus \{0\} \to \mathbb{P}^N$ is defined by sending elements to their (equivalence) classes.
+
+\phantom{?}
+
+$\mathbb{P}^N$ is given a topology by having $U$ open iff $\pi^{-1}(U)$ is open in $\mathbb{C}^{N+1}\setminus \{0\}$.
+
+\textbf{Example} $\mathbb{P}^1$ is called the Riemann sphere.
+\end{frame}
+
+\begin{frame}
+\frametitle{Projective space}
+
+\textbf{Canonical holomorphic atlas} on $\mathbb{P}^n$ consists of the charts $(U_i, \phi_i)_{i\leq N}$ where \[U_i = \{[z_0:\cdots:z_N] \mid z_i\neq 0\}\] and $\phi_i : U_i \to \mathbb{C}^N$ given by \[\phi([z_0:\cdots:z_n]) = (\zeta_1, \ldots, \zeta_N)\] Read the text for the definition of $\zeta_k$.
+
+\phantom{?}
+
+Each $U_i$ is biholomorphic to $\mathbb{C}^N$, and $\mathbb{P}^N\setminus U_i = \{[z_0:\cdots:z_N]\mid z_i=0\}$ can be identified with $\mathbb{P}^{N-1}$.\footnote{Why is this important?}
+
+
+\end{frame}
+
+% Complex Projective Space부분의 decomposition을 CW complex 관점에서 설명
+
+\begin{frame}
+\frametitle{Submanifolds}
+
+$X$, a complex $n$-manifold. A \textbf{codimension} $k$ \textbf{submanifold} of $X$ is a closed subset $Y\subset X$ such that for every point $y \in Y$ there exists an open neighborhood $U_y \subset X$, and local holomorphic coordinates $(z_1,\ldots,z_n)$ on $U_Y$ such that \begin{itemize}
+    \item $z_1(y) = \cdots = z_n(y) = 0$
+    \item $y^\prime \in U_y \cap Y \iff z_1(y^\prime) = \cdots = z_k(y\prime) = 0$
+\end{itemize}
+
+The codimension $k$ submanifolds are complex $n-k$-manifolds.\footnote{Proof?}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Implicit Function Theorem}
+
+\textbf{Theorem.} If $F: X \to Y$ is a holomorphic map, dim $Y = k$, and $y \in Y$ is a regular value of $F$, then the fiber $F^{-1}(y)$ is a codimension $k$ submanifold of $X$.
+
+This is an easy way of obtaining a submanifold.\footnote{cf. Do Carmo, Diff. Geo. of Curves and Surfaces}
+
+We omit the proof of this theorem.
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Sard's Theorem}
+
+\textbf{Theorem.} If $F : X\to Y$ is a holomorphic map, then the set of critical points has measure zero.
+
+Applying this to the IFT, we conclude that almost all fibers $F^{-1}(y)$ are smooth submanifolds, or in other words the generic fiber is smooth.
+
+Again, we omit the proof.\footnote{However, it is worthwhile to note that one of the most famous proofs of this theorem by J. Milnor depends on the second-countability of $X$, which in this case is omitted.}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sard's Theorem}
+
+Using this, we may regard $X$ as a union of the fibers $F^{-1}(t)$ for $t\in T$. We show that the understanding of the changes in the topology and geometry of $F^{-1}(T)$ as $t$ approaches critical values leads to nontrivial conclusions.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Algebraic Manifolds}
+
+An \textbf{algebraic manifold} is a smooth algebraic variety. They are constructed by the closed subsets \[V_P = \{[z_0 : \cdots : z_N] \in \mathbb{P}^N \mid P(z_0,\ldots,z_N) = 0\}\] for $P \in \mathcal{P}_{d,N}$, which is the space of degree $d$ homogeneous polynomials in $N+1$ variables over the base field $\mathbb{C}$.
+
+\phantom{?}
+
+$V_P$ are called hypersurfaces of degree $d$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Algebraic Manifolds}
+
+
+You may have noticed that the $V_p$ may fail to be manifolds. However using Sard's theorem we claim that \textit{almost all} $V_P$ are codimension-1 submanifolds of $\mathbb{P}^N$.
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Algebraic Manifolds}
+
+\textbf{Claim.} For almost all $P \in \mathcal{P}_{d,N}$, $V_p$ is a codimension 1 submanifold of $\mathbb{P}^N$.
+
+\textbf{Proof.} Consider the holomorphic map \[F : X \to \mathbb{P}(d,N), \quad ([\mathbf{z}],[P]) \mapsto [P]\] where $X = \{([\mathbf{z}],[P])\in \mathbb{P}^N \times \mathbb{P}(d,N) \mid P(\mathbf{z}) = 0\}$.\footnote{$\mathbb{P}(d,N) = \mathcal{P}_{d,N}^*/\sim$ where $P \sim Q$ iff $\lambda P = Q$ for some $\lambda \in \mathbb{C}$.} We know $X$ is a smooth manifold by the implicit function theorem. Then we may apply Sard's theorem to $F^{-1}(P) = V_P$, which shows that almost all of them are smooth.
+\end{frame}
+
+\begin{frame}
+\frametitle{The case $d=1$}
+
+If $d=1$ then all polynomials are linear. The zero set of linear polynomials are hyperplanes. In this case, the hyperplane $V_P$ completely determines the image of $P$ in $\mathbb{P}(1,N)$.\footnote{This is because $V_P$ are invariant to scalar multiples of $P$.} Therefore, the space $\mathbb{P}(1,N)$ can be identified with the set of vector hyperplanes in $\mathbb{P}^N$.
+
+\phantom{?}
+
+$\mathbb{P}(1,N)$ is called the dual of $\mathbb{P}^N$ and is denoted by $\check{\mathbb{P}}^N$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Projective Variety}
+
+Given a set $(P_s)_{s\in S}$ of homogeneous polynomials in $N+1$ variables over $\mathbb{C}$, define \[V(S) = \bigcup_{s\in S}V_{P_s}\] $V(S)$ is called a \textbf{projective variety}.
+
+Often, a projective variety is a smooth submanifold. Chow's theorem states that an analytic subspace of complex projective space closed in the usual topology is an algebraic subvariety.
+
+\end{frame}
+
+\section{Special classes of holomorphic maps}
+
+\begin{frame}
+\frametitle{Projections}
+
+Suppose $X$ is a smooth, degree $d$ curve\footnote{meaning that it has codimension 1, therefore having dimension 1} in $\mathbb{P}^2$. Note that lines in $\mathbb{P}^2$ are hyperplanes. Fix a point $C \in \mathbb{P}^2$ and a line $L \subset \mathbb{P}^2\setminus \{C\}$.
+
+\phantom{?}
+
+For any $p \in \mathbb{P}^2\setminus \{C\}$, denote $[Cp]$ the unique projective line determined by $C$ and $p$.
+
+\phantom{?}
+
+Denote by $f(p)$ the intersection of $[Cp]$ and $L$. Then $f$ is holomorphic, and is called the \textbf{projection} from $C$ to $L$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Projections}
+Recall $X \subset \mathbb{P}^2$. If $C \notin X$ then the restriction $f|_X : X \to L$ is a holomorphic map. Its critical points are $p\in X$ such that $[Cp]$ is tangent to $X$.\footnote{Proof?}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Projections}
+Now suppose $C$ is a point at infinity, i.e. the line $\{[0,z_1,z_2]\mid (z_1,z_2)\in \mathbb{C}^2\} \subset \mathbb{P}^2$. It is good practice to understand why the set of points at infinity is a line in projective space.
+
+Since $X$ is of degree $d$, every line in $\mathbb{P}^2$ intersects $X$ in $d$ points (counting multiplicities).
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Projections}
+
+The \textbf{dual} of the center $C$ is the line $\check{C}\in \check{\mathbb{P}}^2$ consisting of all affine hyperplanes in $\mathbb{P}^2$ passing through $C$.
+
+\phantom{?}
+
+The \textbf{dual} of $X$ is the closed set $\check{X} \subset \check{\mathbb{P}}^2$ consisting of all the lines in $\mathbb{P}^2$ tangent to $X$.
+
+\phantom{?}
+
+$\check{X}$ is a (possibly) singular curve in $\mathbb{P}^2$, i.e. it can be described as the zero locus of a homogeneous polynomial.\footnote{?}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Projections}
+
+A critical point of $f$ corresponds to a line through $C$ (point in $\check{C}$) which is tangent to $X$ (belongs to $\check{X}$). Thus the expected number of critical points is the expected number of intersection points between $\check{X}$ and $\check{C}$. This is precisely the degree of $\check{X}$.\footnote{?}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{A Historical Remark}
+
+Consider the affine curve $\{(x,y) \in \mathbb{C}^2 \mid y^2 = x(x-1)(x-t)\}$. Now identify the complex (affine) plane $\mathbb{C}^2$ with $\mathbb{P}^2 \setminus \{z_0 = 0\}$ by taking $x = z_1/z_0$ and $y = z_2/z_0$. This leads to the cubic \[z_2^2z_0 = z_1(z_1-z_0)(z_1-tz_0)\] in $\mathbb{P}^2$ which can be regarded as the closure of the graph of the original function not mentioned here.\footnote{How to prove that this is the closure?}
+
+\end{frame}
+
+
+
+\end{document}
