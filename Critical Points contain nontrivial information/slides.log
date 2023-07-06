@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.9)  6 JUL 2023 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.9)  6 JUL 2023 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.tex"
-(g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.tex
+**"g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.tex"
+(g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-06> (c:/texlive/2020/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2020/11/26 v3.60 A class for typesetting presentations
@@ -592,7 +592,7 @@ Package: amsthm 2020/05/29 v2.20.6
 File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box72
-) (g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.aux)
+) (g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -680,7 +680,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 11.
 LaTeX Info: Redefining \pageref on input line 11.
 LaTeX Info: Redefining \nameref on input line 11.
- (g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.out) (g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.out)
+ (g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.out) (g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -745,7 +745,7 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (c:/texlive/2020/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.nav) [1
+) (g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.nav) [1
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
@@ -805,20 +805,26 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
- (g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.aux)
-Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 5E30BC0968838766950CB7E7D253AC12;497.
+ (g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.aux)
+
+Package rerunfilecheck Warning: File `slides.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `slides.out':
+(rerunfilecheck)             Before: F8B94EF5B510389BB4634BAE2E90A264;500
+(rerunfilecheck)             After:  5E30BC0968838766950CB7E7D253AC12;497.
  ) 
 Here is how much of TeX's memory you used:
  20717 strings out of 479302
- 384356 string characters out of 5871205
+ 384596 string characters out of 5871205
  667514 words of memory out of 5000000
  37411 multiletter control sequences out of 15000+600000
  418227 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 131i,15n,132p,545b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 131i,15n,132p,561b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "g:/My Drive/서울대 수업자료/2023-s/Singularity Theory/2. The critical points contain nontrivial information/slides.pdf" (19 pages, 185912 bytes).
+Output written on "g:/My Drive/서울대 수업자료/2023-s/ComplexSingularities/ComplexSingularities/Critical Points contain nontrivial information/slides.pdf" (19 pages, 185321 bytes).
 PDF statistics:
  635 PDF objects out of 1000 (max. 8388607)
  580 compressed objects within 6 object streams
