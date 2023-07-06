@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Milnor numbers and critical points}{3}{0}{1}
+\beamer@sectionintoc {2}{Riemann-Hurwitz theorem}{12}{0}{2}
+\beamer@sectionintoc {3}{Genus formula}{18}{0}{3}

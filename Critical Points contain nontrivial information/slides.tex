@@ -1,0 +1,251 @@
+\documentclass{beamer}
+
+\usetheme{CambridgeUS}  % Select your favorite theme
+
+
+\title{Critical points contain nontrivial information}
+\author{Chapter 2}
+\institute{Complex Singularities}
+\date{\today}
+
+\begin{document}
+
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Introduction}
+
+We will show that the critical points determine most of the topological properties of \[f : \Sigma \to T\] where $\Sigma$ and $T$ are complex curves.
+
+\end{frame}
+
+
+\section{Milnor numbers and critical points}
+
+\begin{frame}
+\frametitle{The Milnor number}
+
+Consider a holomorphic function $f : \mathbb{D} \to \mathbb{C}$ where $f(0)=0$. We may rewrite $f$ as \[z^k(a_k + a_{k+1}z+ \cdots)\] for a positive integer $k$ such that $a_k \neq 0$. We call $k$ the \textbf{multiplicity} of $z_0 = 0$ in the fiber $f^{-1}(0)$.
+
+\phantom{?}
+
+Additionally, if $f^\prime(0) = 0$, then $k \geq 2$, and $k-1$ is called the \textbf{Milnor number} of the critical point, denoted by $\mu(f,0)$.
+
+\phantom{?}
+
+We define the Milnor number of a regular point to be zero.
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Milnor number}
+
+\textbf{Claim.} $0$ is a nondegenerate critical point if and only if its Milnor number $\mu$ is 1.
+
+\phantom{?}
+
+\textbf{Proof.} Suppose $0$ is a nondegenerate critical point of $f$. Since it is nondegenerate, $k$ cannot exceed 2, but also since it is a critical point $k$ must be greater than 1. Therefore $k = 2$, so its Milnor number is 1. Conversely, suppose $\mu = 1$. Then it follows that $k = 2$, so $0$ is a nondegenerate critical point.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Tougeron's determinacy theorem}
+
+\textbf{Lemma.} Let $f: \mathbb{D} \to \mathbb{C}$ be a holomorphic function with $\mu = \mu(f,0) > 0$. Then there exist small open neighborhoods $U,Z$ of $0 \in \mathbb{D}$ and a biholomorphic map $\phi: U \to Z$ such that \[f(\phi(z)) = z^{\mu + 1}\] for all $z \in U$.
+
+\phantom{?}
+
+\textbf{Proof.} Note that for $\mu = 0$ this is just the implicit function theorem. Since we can write $f(z) = z^{\mu + 1}g(z)$ where $g(z) \neq 0$ is a holomorphic function, we can find a small open neighborhood $V$ of $0$, and a holomorphic function $r : V \to \mathbb{C}$ such that $g(z) = (r(z))^{\mu + 1}$. This means that $r(z) = g(z)^{1/\mu+1}$.\footnote{Well-defined?}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Tougeron's determinacy theorem}
+
+Now, note that $ u := zr(z)$ satisfies $u(0) = 0$, $u^\prime(0) \neq 0$ so that it defines a biholomorphism $Z \to U$ between small enough open neighborhoods of $0$ in $Z,U$. Also note that $f^{-1}$ is biholomorphic\footnote{Why?}, so we have $f^{-1}(u)$ biholomorphic. Plug this into $f(z)$ to get $u = f^{-1}(u)^{\mu+1}g(f^{-1}(u))$ from which we get\footnote{This is simple... but somehow I am stuck}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The power map $u \to u^k$}
+
+The power map $u \to u^k$ defines a $k$\textbf{-sheeted branched cover} of $\mathbb{D}$ over itself (except zero).
+
+\phantom{?}
+
+Note that there is a \textbf{branching at zero}, meaning that the fiber over zero is different from fibers over other points.
+
+\phantom{?}
+
+It is more clear in polar expressions: \[R^k e^{ki\theta}\] for $0 \leq \theta \leq 2\pi$, $R>0$ obviously covers $\mathbb{D}$ $k$ times. However, for $R=0$ this fails to cover $\mathbb{D}$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Milnor numbers and fibers}
+
+We claim that the Milnor number $k-1$ is equal to the number of points in a \textit{general} fiber minus the number of points in the \textit{singular} fiber.\footnote{Is there any rigorous criteria?}
+
+\phantom{?}
+
+For the power map $u \to u^k$, the number of points in a general fiber is $k$, and the singular fiber contains a single point $0$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Milnor numbers and fibers}
+
+If $X$ and $Y$ are complex $1$-manifolds, any holomorphic function $f:X \to Y$ can be \textit{locally} described as a holomorphic function $f:\mathbb{D} \to \mathbb{C}$.
+
+\phantom{?}
+
+Therefore, we may define the Milnor number for holomorphic functions between complex manifolds.
+
+\phantom{?}
+
+Now Tougeron's determinacy theorem tells us that \textit{any} singular point of such holomorphic has a branching behaviour. Moreover, note that critical points are isolated (for nonconstant $f$), so that if $X$ is compact then $f$ may only have finitely many critical points.$\dagger$
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{A brief digression on a proof}
+
+$\dagger$Denote the critical points of $f$ as $C \subset X$. Since critical points are isolated by the identity theorem, we may find open neighborhoods $U_c$ for $c \in C$ such that $U_c \cap C = \{c\}$. Also $C$ is closed in $X$ since it doesn't have limit points. Then $\{U_c\}_{c\in C} \cup \{X-C\}$ is an open cover of $X$, which is compact, thus must have a finite subcover. Therefore $C$ must be a finite set.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Milnor numbers and fibers}
+
+Moreover, if $X$ is compact then only finitely many Milnor numbers of $f : X \to Y$ are nonzero.
+
+\phantom{?}
+
+Now, how are these Milnor numbers related to the topology of $f: \Sigma \to T$?
+
+\end{frame}
+
+\section{Riemann-Hurwitz theorem}
+
+\begin{frame}
+\frametitle{The Riemann-Hurwitz Theorem}
+
+Suppose that $\Sigma$ and $T$ are two compact complex curves. Suppose $f : \Sigma \to T$ is a nonconstant holomorphic map.
+
+\phantom{?}
+
+Note that $\Sigma$ and $T$ are topologically 2-dimensional closed oriented manifolds (known as a \textit{Riemann surface}).
+
+\phantom{?}
+
+It is well known that such surfaces are completely determined, up to \textit{homeomorphism}, by their Euler characteristic $\chi$.
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The Riemann-Hurwitz Theorem}
+
+The \textbf{Riemann-Hurwitz Theorem} states that $\chi(\Sigma)$ can be completely determined by \textit{mild} global information of $f : \Sigma \to T$ and \textit{detailed} local information of $f$, assuming that we know $\chi(T)$.
+
+\phantom{?}
+
+Here, the global information corresponds to the degree of $f$, and the local information corresponds to the Milnor numbers of the critical points of $f$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proof of the Riemann-Hurwitz Theorem}
+
+\textbf{Theorem.} $f:\Sigma \to T$ where $f$ is a holomorphic function between compact complex curves. Suppose deg$f = d > 0$. Then \[\chi(\Sigma) = d\chi(T) - \sum_{p \in \Sigma}\mu(f,p)\]
+
+\textbf{Proof.} We know that $f$ has at most finitely many critical points in $\Sigma$. Therefore, we may denote the critical values of $f$ as $t_1, \ldots, t_n$. Find a triangulation $\mathcal{T}$ of $T$ having the critical values among its vertices. By definition we have \[\chi(T) = \#V-\#E+\#F\]
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proof of the Riemann-Hurwitz Theorem}
+
+Now we define $\mu(t) = \sum_{p \in f^{-1}(t)}\mu(f,p)$, the sum of Milnor numbers of the fiber of $t \in T$. Observe that $\mu(t) = 0$ if and only if $t$ is a regular value. Also refering to Fig 2.2, it is clear that \[\mu(t_0) = \lim_{t\to t_0}\#f^{-1}(t)-\#f^{-1}(t_0) = d - \#f^{-1}(t_0)\] for any $t_0 \in T$ where $\#$ is the counting function.
+
+\phantom{?}
+
+Intuitively, the Milnor number of a point represents how \textit{far} the function is from its full degree.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proof of the Riemann-Hurwitz Theorem}
+
+Since $f$ is onto\footnote{I have no idea why.} we can lift $\mathcal{T}$ to a triangulation $\mathcal{T}^\prime = f^{-1}(\mathcal{T})$ of $\Sigma$. Since critical points are isolated, we deduce that $\#E^\prime = d\#E$ and $\#F^\prime = d\#F$.\footnote{Rigorous proof?}
+
+\phantom{?}
+
+Moreover, using $\mu(t_0) = d - \#f^{-1}(t_0)$ we deduce \[\#V^\prime = d\#V - \sum_{t\in T}\mu(t) = d\#V - \sum_{p\in \Sigma}\mu(f,p)\] from which we can easily conclude that \[\chi(\Sigma) = d\chi(T) - \sum_{p\in \Sigma}\mu(f,p).\]
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Nondegenerate case}
+
+\textbf{Corollary.} Suppose $f : \Sigma \to \mathbb{P}^1$ is a holomorphic map\footnote{Recall that $\mathbb{P}^1$ is a complex 1-manifold, where charts are given by the canonical open coverings.} which has \textit{only nondegenerate critical points}. If $\nu$ is the number of those points, then $\chi(\Sigma) = 2\text{deg}f - \nu$.
+
+\phantom{?}
+
+\textbf{Proof.} Based on results of homology, the Euler characteristic of $\mathbb{P}^1$ is 2. Recall that Milnor numbers of nondegenerate critical points were 1.
+
+\end{frame}
+
+
+\section{Genus formula}
+
+\begin{frame}
+\frametitle{Genus formula}
+
+We apply the Riemann-Hurwitz theorem on a classical problem.
+
+\phantom{?}
+
+Suppose $P \in \mathcal{P}_{d,2}$, and let $X = V_P$. We already know that for \textit{generic} $P$, the set $V_P$ is a compact 1-dimensional submanifold of $\mathbb{P}^2$. Its topological type is completely described by its genus, which is given below.
+
+\phantom{?}
+
+\textbf{Genus formula.} For generic $P \in \mathcal{P}_{d,2}$, the curve $V_P$ is a Riemann surface of genus \[g(V_P) = \frac{(d-1)(d-2)}{2}.\]
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proof of the genus formula}
+
+We use the Corollary derived earlier, together with projections from $V_P$ to $\mathbb{P}^1$ as holomorphic maps.
+
+\phantom{?}
+
+Fix a line $L \subset \mathbb{P}^2$ and a point $C \in \mathbb{P}^2\setminus V_P$. Recall the definition of a projection map $f: X \to L$. 
+
+\end{frame}
+
+
+
+\end{document}
