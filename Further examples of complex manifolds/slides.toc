@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Holomorphic line bundles}{2}{0}{1}
+\beamer@sectionintoc {2}{Functorial operations on line bundles}{12}{0}{2}
+\beamer@sectionintoc {3}{Divisors}{14}{0}{3}
+\beamer@sectionintoc {4}{The blowup construction}{24}{0}{4}

@@ -1,0 +1,258 @@
+\documentclass{beamer}
+\usepackage{mathtools}
+\usetheme{CambridgeUS}  % Select your favorite theme
+
+
+\title{Further examples of complex manifolds}
+\author{Chapter 3}
+\institute{Complex Singularities}
+\date{\today}
+
+\begin{document}
+
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\section{Holomorphic line bundles}
+
+\begin{frame}
+\frametitle{Holomorphic line bundles}
+
+A \textbf{holomorphic line bundle} formalizes the intuitive idea of a \textit{holomorphic family of complex lines}.\newline
+For example, the trivial $\mathbb{C} \times M$ where $M$ is a complex manifold.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Holomorphic line bundles}
+
+\textbf{Definition.} First think of $(L, \pi, M)$ such that \begin{itemize}
+    \item The total space $L$ which is a complex manifold
+    \item The base $M$ which also is a complex manifold
+    \item The natural projection $\pi : L \to M$ which is holomorphic
+\end{itemize}note that $(L,\pi,M)$ is not yet a holomorphic line bundle.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Holomorphic line bundles}
+
+$(L,\pi,M)$ is called a \textbf{holomorphic line bundle} if for all $x \in M$ there exist\begin{itemize}
+    \item a neighborhood $U$ of $x$ in $M$
+    \item a biholomorphic map $\Psi: \pi^{-1}(U) \to \mathbb{C} \times U$
+\end{itemize}
+
+such that \begin{itemize}
+    \item Each fiber $L_m := \pi^{-1}(m)$ for $m \in M$ is a complex 1-dim space
+    \item $\text{Proj} \circ \Psi = \pi$\footnote{?}
+    \item The induced map $\Psi(m):L_m \to \mathbb{C}\times \{M\}$ is a linear isomorphism
+\end{itemize}
+
+$\Psi$ is called a \textit{local trivialization} of $L$ (over $U$)
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Gluing maps of holomorphic line bundles}
+
+Recall how we defined a manifold $M$. For an open cover $(U_\alpha)_{\alpha \in A}$ of $M$, we may find trivializations $\Psi_\alpha$ over the $U_\alpha$.\newline Therefore, we may define \textbf{gluing maps} on the overlaps $U_{\alpha\beta} := U_\alpha\cap U_\beta$ as \[g_{\beta\alpha} : U_{\alpha\beta} \to \text{Aut}(\mathbb{C})\simeq \mathbb{C}^*\]\footnote{For rank $m$, Aut$(\mathbb{C})$ is replaced with GL$(m,\mathbb{C})$} which are holomorphic maps $m\mapsto g_{\beta\alpha}(m)$ determined by
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Gluing maps of holomorphic line bundles}
+
+The gluing maps satisfy the \textit{cocycle condition} \[g_{\alpha\gamma}(m)\circ g_{\gamma\beta}(m)\circ g_{\beta\alpha}(m)= \mathbf{1}_{\mathbb{C}}\] for all $\alpha,\beta,\gamma\in A$, $m \in U_{\alpha\beta\gamma}$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Gluing maps of holomorphic line bundles}
+
+Note that the total space $L$ can be defined as \[\left(\coprod_{\alpha \in A}\mathbb{C}\times U_\alpha\right)/\sim\] where $(z_\alpha,m_\alpha) \sim (z_\beta,m_\beta) \iff m_\alpha = m_\beta =: m$ and $z_\beta = (g_{\beta\alpha}(m))(z_\alpha)$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Holomorphic section}
+
+\textbf{Definition.} A \textbf{holomorphic section} of a holomorphic line bundle $L \xrightarrow{\pi}M$ is a holomorphic map \[u:M \to L\] such that $u(m) \in L_m$ for all $m \in M$. Denote by $\mathcal{O}_M(L)$ the space of holomorphic sections of $L \to M$.\newline Every line bundle admits the \textit{zero section} which associates to $m$ the origin of $L_m$.\newline If a line bundle $L$ is given by a gluing cocycle $g_{\beta\alpha}$ then a section is a collection of holomorphic $f_\alpha:U_\alpha \to \mathbb{C}$ where $f_\beta = g_{\beta\alpha}f_\alpha$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The tautological line bundle}
+
+The tautological line bundle $\mathcal{T}_N$ over $\mathbb{P}^N$ is defined by \[\mathcal{T}_N = \left\{[z,l]\in \mathbb{C}^{N+1}\times \mathbb{P}^N \mid z \in l\right\}\] hence 'tautological'. \newline Task: prove $\mathcal{T}_N$ is a complex manifold and $(\mathcal{T}_N,\pi,\mathcal{P}^N)$ is a holomorphic line bundle by constructing holomorphic charts and local trivializations.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tautological line bundle over $\mathbb{P}^1$}
+
+The projective line can be identified with the Riemann sphere.\newline The two open sets $U_0$ and $U_1$ on $\mathbb{P}^1$ correspond to the canonical charts \[U_0 = V_N = S^2 \setminus \text{South Pole}, \quad U_1 = V_S = S^2 \setminus \text{North Pole}\] with $z = z_1/z_0$ on $V_N$, and $\zeta = z_0/z_1$ on $V_S$ related by $\zeta = 1/z$.\newline The translation function on $U_{01}$ is given by \[g_{10}(z) = g_{SN}(z) = z_1/z_0 = z\] The total space is covered by $W_N = \pi^{-1}(U_N)$ and $W_S = \pi^{-1}(V_N)$ with coordinates given by $(s,t)$ on $W_N$ where $z_0 = s, z_1 = st$ and $(u,v)$ on $W_S$ where $z_0 = uv, z_1 = v$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tautological line bundle over $\mathbb{P}^1$}
+
+The transition map between the two coordinates is \[(u,v) = (st,t^{-1})\]
+
+\end{frame}
+
+
+
+\section{Functorial operations on line bundles}
+
+\begin{frame}
+\frametitle{Functorial operations on line bundles}
+
+Suppose we are given two holomorphic line bundles $L, \overline{L} \to M$ defined by the open cover $(U_\alpha)$ \footnote{meaning that the charts are the same?} and the holomorphic gluing cocycles \[g_{\beta\alpha},\overline{g}_{\beta\alpha} : U_{\alpha\beta} \to \mathbb{C}^*\] The \textbf{dual} of $L$ is the holomorphic line bundle $L^*$ defined by \[1/g_{\beta\alpha} : U_{\beta\alpha} \to \mathbb{C}^*\] The \textbf{tensor product} of $L, \overline{L}$ is the line bundle $L \otimes \overline{L}$ defined by the gluing cocycle $g_{\beta\alpha}\overline{g}_{\beta\alpha}$.\footnote{meaning of juxtaposition?}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Functorial operations on line bundles}
+
+A \textbf{bundle morphism} $L \to \overline{L}$ is a holomorphic section of $\overline{L}\otimes L^*$, or equivalenty a holomorphic map $L\to \overline{L}$ such that for all $m \in M$ we have $\phi(L_m) \subset \overline{L}_m$, and the induced map $L_m \to \overline{L}_m$ is linear.\footnote{What is $\phi$??} \newline Denote by Pic$(M)$ the set of isomorphism classes of holomorphic lines bundles over $M$.\footnote{Pic as in Picard group, with group operation $\otimes$} \newline The tensor product induces an abelian group structure on Pic$(M)$.
+
+\end{frame}
+
+\section{Divisors}
+
+\begin{frame}
+\frametitle{Divisors}
+
+A \textbf{divisor} is a formal linear combination over $\mathbb{Z}$ of codimension 1 subvarieties.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Examples}
+
+Suppose $f: \mathbb{D} \to \mathbb{C}$ is a holomorphic function such that $f^{-1}(0) = \{0\}$. The origin is a codimension one subvariety, so it defines a divisor $(0)$ on $\mathbb{D}$. Define \[(f)_0 = n(0)\] where $n$ is the multiplicity of $0$. (or equivalenty, one plus the Milnor number of $f$ at zero)
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Examples}
+
+Suppose $f: \mathbb{D}\to \mathbb{C} \cup \{\infty\}$ a meromorphic function with zeros $\zeta_i$ with multiplicity $n_i$, and poles $\mu_j$ of order $m_j$. \[(f)_0 = \sum_i n_i\zeta_i\] while \[(f)_\infty = \sum_j m_j\mu_j\] The \textbf{principal divisor} $(f)$ is $(f)_0 - (f)_\infty = (f)_0 - (1/f)_0$.\newline Note that if $g:\mathbb{D}\to \mathbb{C}$ is a nonvanishing holomorphic function, then $(gf) = (f)$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Examples}
+
+$M$, a complex manifold. $f: M \to \mathbb{C} \cup \{\infty\}$ a meromorphic function (or equivalenty, a holomorphic function $f: M \to \mathbb{P}^1$) then \[(f) = (f^{-1}(0)) - (f^{-1}(\infty))\]
+
+Also a codimension 1 submanifold $V$ of a complex manifold $M$ defines a divisor on $M$.\footnote{??}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{More on divisors}
+
+In general, a divisor is obtained by patching the principal divisors of a family of locally defined meromorphic functions. \newline It is described by an open cover $(U_\alpha)$ and a collection of meromorphic $f_\alpha : U_\alpha \to \mathbb{C}\cup \{\infty\}$ such that on $U_{\alpha\beta}$ the ratios $f_\alpha/f_\beta$ are nowhere vanishing holomorphic functions. \newline In other words, $f_\alpha$ and $f_\beta$ have zeros and poles of same order on the overlaps.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{More on divisors}
+
+A divisor is called \textbf{effective} if the $f_\alpha$ are holomorphic. \newline Denote by \textbf{Div}$(M)$ the set of divisors on $M$, and by \textbf{PDiv}$(M)$ the set of principal divisors. \newline To a divisor $D$ with defining functions $f_\alpha$ one can associate a line bundle $[D]$ described by the gluing cocycle $g_{\beta\alpha} = f_\beta/f_\alpha$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{More on divisors}
+
+Denote by $\emptyset$ the divisor determined by the constant function $1$. \newline If $D,E$ are two divisors described by defining functions $f_\alpha$ and $g_\alpha$, denote $D+E$ the divisor described by $f_\alpha g_\beta$. \newline Also denote by $-D$ the divisor described by $(1/f_\alpha)$. \newline Observe that $D + (-D) = \emptyset$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{More on divisors}
+
+Thus, $(\textbf{Div}(M),+)$ is an abelian group, and $\textbf{PDiv}$ is a subgroup. \newline Note that $[D+E] = [D] \otimes [E]$ and $[-D] = [D]^*$ in Pic$(M)$. \newline Therefore the map $\textbf{Div}(M) \to \text{Pic}(M)$ defined by $D \mapsto [D]$ is an abelian group homomorphism.\newline Note that the kernel of this map is $\textbf{PDiv}(M)$.\footnote{why?? What is the identity element of Pic(M)?} Thus \[\textbf{Div}(M)/\textbf{PDiv}(M) \to \text{Pic}(M)\] is injective. This is also surjective when $M$ is an algebraic manifold, by Hodge-Lefschetz.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Further examples}
+
+Consider the tautological line bundle $\mathcal{T}_N \to \mathbb{P}^N$. Its dual is called the \textbf{hyperplane line bundle}, denoted $H_N$. If $U_i$ is the standard atlas on $\mathbb{P}^N$, $H_N$ is given by the gluing cocycle $g_{ji} = z_i/z_j$.\newline We claim that any linear function $A$ from $\mathbb{C}^{N+1}$ to $\mathbb{C}$ defines a section of $H$. \newline Define \[A_i:U_i \to \mathbb{C}, \quad A_i([z_0:\cdots:z_N]) = \frac{1}{z_i}A(z_0,\cdots,z_N)\] where $A_j = (z_i/z_j)A_i = g_{ji}A_i$ which proves our claim.\footnote{Need inspection. Recall definition of section.}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Further examples}
+
+Any $P \in \mathcal{P}_{d,N}$\footnote{Note that this implies $N+1$ variables.} defines a holomorphic section of $H^d$, thus constructing an injection $\mathcal{P}_{d,N} \hookrightarrow \mathcal{O}_{\mathbb{P}^N}(H^d)$. \newline In fact, this is an isomorphism.
+
+\end{frame}
+
+\section{The blowup construction}
+
+\begin{frame}
+\frametitle{Informal introduction}
+
+Consider two distinct lines passing the origin. In the origin, we cannot distinguish these two lines. However in the projectivized space, these two lines are distinct points. \newline We aim to formalize this distinction.
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Blowup of $M$ at $m$}
+
+Suppose $M$ is a complex $N$-manifold, and $m \in M$. The \textbf{blowup} of $M$ at $m$ is the complex manifold $\widehat{M_m}$ constructed by \begin{itemize}
+    \item choosing a neighborhood $U$ of $M$ biholomorphic to the unit open ball $B \subset \mathbb{C}^N$, setting $\widehat{U_m} := \beta^{-1}_{N-1}(B) \subset \mathcal{T}_{N_1}$\footnote{beta??}
+    \item The blowdown map $\beta_{N-1}$ establishes an isomorphism \[\widehat{U_m}\setminus \mathbb{P}^{N-1} \simeq B \setminus \{0\} \simeq U \setminus \{m\}\]
+\end{itemize} Now glue $\widehat{U_m}$ to $M\setminus \{m\}$ using the blowdown map to obtain $\widehat{M_m}$.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Blowup of $M$ at $m$}
+
+Observe there exists a natural holomorphic map $\beta : \widehat{M_m} \to M$ called the \textbf{blowdown map}. The fiber $\beta^{-1}(m)$ is called the \textbf{exceptional divisor} and is a hypersurface isomorphic to $\mathbb{P}^{N-1}$, denoted by $E$. Observe that \[\beta: \widehat{M_m} \setminus E \to M \setminus \{m\}\] is biholomorphic.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Some examples}
+
+$\mathcal{T}_{N-1}$ is the blowup of $\mathbb{C}^N$ at the origin. \newline The blowup of $M$ at $m$ is diffeomorphic in an orientation-preserving fashion to the connected sum \[M\# \overline{\mathbb{P}}^N\] where $\overline{\mathbb{P}}^N$ is the oriented smooth manifold obtained by changing the canonical orientation of $\mathbb{P}^N$.\footnote{this is an exercise.}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proper transform}
+
+$m \in M$. $S$ a closed subset of $M$. The \textbf{proper transform} of $S$ in $\widehat{M_m}$ is the closure of $\beta^{-1}(S\setminus \{m\})$ in $\widehat{M_m}$, denoted by $\overline{S}_m$. \newline \textbf{Example.} Consider $S = \{z_0z_1 = 0\} \subset M = \mathbb{C}^2$. The blowup $\widehat{M_0}$ is covered by \footnote{I really lost it here...}
+
+
+\end{frame}
+
+\end{document}
